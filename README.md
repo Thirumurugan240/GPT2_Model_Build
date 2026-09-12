@@ -81,7 +81,7 @@ before it learns to make sense.
 | `download_data.py` | downloads and tokenizes the dataset |
 | `train_gpt2.py` | loads the tokens and trains the model |
 | `generate.py` | writes text with the trained model |
-| `model.py` | an alternative version of the model, not used by the trainer |
+| `model.ipynb` | Learning Version |
 | `requirements.txt` | the packages you need |
 
 ---
@@ -142,13 +142,7 @@ small enough to train on a laptop.
 | Configuration | Parameters |
 | --- | --- |
 | the defaults in `train_gpt2.py` | 29 million |
-| the full settings in `GPT-2.py` | 163 million |
-| `model.py`, which shares its output weights | 124 million |
 
-The full configuration in `GPT-2.py` is larger than the real GPT-2 because its
-output layer has its own weights. The real GPT-2 reuses the token embedding
-matrix for that layer, which is what `model.py` does and why it lands at the
-familiar 124 million.
 
 ---
 
